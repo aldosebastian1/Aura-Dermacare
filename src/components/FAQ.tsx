@@ -28,32 +28,31 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-8 bg-surface-container-low">
+    <section className="py-20 px-8 bg-surface-container-low">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl font-headline font-bold text-center mb-16 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
         <div className="space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = activeIndex === idx;
             return (
-              <div 
-                key={idx} 
-                className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 border ${
-                  isOpen ? 'border-primary/20 shadow-lg' : 'border-outline-variant/10 shadow-sm'
-                }`}
+              <div
+                key={idx}
+                className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 border ${isOpen ? 'border-primary/20 shadow-lg' : 'border-outline-variant/10 shadow-sm'
+                  }`}
               >
-                <button 
+                <button
                   onClick={() => toggleFAQ(idx)}
                   className="w-full p-6 flex justify-between items-center text-left font-bold text-lg hover:bg-surface-container-lowest transition-colors group"
                 >
                   <span className={`${isOpen ? 'text-primary' : 'text-on-surface'} transition-colors`}>
                     {faq.q}
                   </span>
-                  <motion.span 
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  <motion.span
+                    animate={{ rotate: isOpen ? 90 : 0 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
                     className={`material-symbols-outlined text-2xl ${isOpen ? 'text-primary' : 'text-on-surface-variant'}`}
                   >
-                    expand_more
+                    chevron_right
                   </motion.span>
                 </button>
                 <AnimatePresence>
@@ -64,7 +63,7 @@ const FAQ: React.FC = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/5 pt-4">
+                      <div className="px-6 pb-5 text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/5 pt-1">
                         {faq.a}
                       </div>
                     </motion.div>
