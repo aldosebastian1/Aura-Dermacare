@@ -14,8 +14,8 @@ const TrustStrip: React.FC = () => {
     <section className="bg-surface-container-low py-7 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4 items-start md:items-center">
         {items.map((item, idx) => (
-          <motion.div 
-            key={idx} 
+          <motion.div
+            key={idx}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

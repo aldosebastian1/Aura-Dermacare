@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <section id="beranda" className="relative lg:min-h-[750px] flex items-start pt-12 sm:pt-5 pb-6 px-6 lg:px-8 overflow-hidden bg-white/50 scroll-mt-24">
       <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid">
         {/* Left Content Column */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -31,8 +31,8 @@ const Hero: React.FC = () => {
               <WhatsAppIcon size={24} className="sm:w-6 sm:h-6 w-5 h-5" />
               Chat WhatsApp
             </a>
-            <a 
-              href="#paket-harga" 
+            <a
+              href="#paket-harga"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('paket-harga')?.scrollIntoView({ behavior: 'smooth' });
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex items-center gap-6 pt-2">
+          <div className="flex items-center gap-6 ">
             <div className="flex -space-x-3">
               {[0, 1, 2].map((_, i) => (
                 <div
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* Right Visual Column */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
             />
 
             {/* Overlapping Result Card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
