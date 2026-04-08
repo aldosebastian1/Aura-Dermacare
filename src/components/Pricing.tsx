@@ -1,0 +1,69 @@
+import React from 'react';
+
+const Pricing: React.FC = () => {
+  const plans = [
+    {
+      title: 'Starter Cleanse',
+      category: 'Detox & Reset',
+      features: ['Deep cleansing & blackhead', 'Hydrating face massage', 'Light chemical peel', 'Estimasi 45-60 menit'],
+      isPopular: false
+    },
+    {
+      title: 'Regular Glow',
+      category: 'Repair & Brighten',
+      features: ['Advanced Acne/Brightening', 'Serum Injection / Mesotherapy', 'LED Light Therapy', 'Estimasi 75-90 menit'],
+      isPopular: true
+    },
+    {
+      title: 'Intensif Sculpt',
+      category: 'Premium Anti-Aging',
+      features: ['Microneedling RF / HIFU', 'DNA Salmon / Skin Booster', 'Exclusive Recovery Mask', 'Estimasi 120 menit'],
+      isPopular: false
+    }
+  ];
+
+  return (
+    <section className="py-24 px-8 bg-surface">
+      <div className="max-w-7xl mx-auto text-center mb-16">
+        <h2 className="text-4xl font-headline font-bold tracking-tight">Pilih Perjalanan Kulitmu</h2>
+      </div>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {plans.map((plan, idx) => (
+          <div 
+            key={idx} 
+            className={`p-8 rounded-[2rem] border transition-all relative ${
+              plan.isPopular 
+                ? 'bg-surface-container-lowest border-primary-container shadow-xl scale-105 z-10' 
+                : 'bg-surface-container border-outline-variant/10 hover:border-primary/30'
+            }`}
+          >
+            {plan.isPopular && (
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-xs font-bold uppercase">
+                Terpopuler
+              </div>
+            )}
+            <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
+            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-6">{plan.category}</p>
+            <ul className="space-y-4 text-sm text-on-surface-variant mb-10 text-left">
+              {plan.features.map((feat, fIdx) => (
+                <li key={fIdx} className="flex gap-3">
+                  <span className="material-symbols-outlined text-primary text-sm">check</span>
+                  {feat}
+                </li>
+              ))}
+            </ul>
+            <button className={`w-full py-3 rounded-xl font-bold transition-all ${
+              plan.isPopular 
+                ? 'bg-primary-container text-on-primary-container hover:shadow-lg' 
+                : 'border border-primary text-primary hover:bg-primary hover:text-white'
+            }`}>
+              Pilih Paket
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Pricing;
