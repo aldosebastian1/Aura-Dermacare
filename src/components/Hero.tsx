@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <div className="col-span-12 lg:col-span-7 flex flex-col space-y-8">
           <div className="space-y-3">
             <span className="inline-block px-4 py-1.5 rounded-full bg-[#93f2f2]/30 text-[#006a6a] text-xs font-bold tracking-widest uppercase">
-              Skin Revolution
+              Revolusi Kulit
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-extrabold tracking-tighter text-[#191c1d] leading-[1.1]">
               Kulit lebih bersih & glowing mulai <span className="text-[#006d2f] italic">4 minggu</span>
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
 
             {/* Overlapping Result Card */}
             <div className="absolute bottom-4 sm:bottom-10 right-4 sm:right-auto bg-white p-4 sm:p-7 rounded-2xl sm:rounded-[2rem] shadow-[0_20px_40px_rgba(25,28,29,0.08)] w-[85%] sm:w-auto max-w-[260px] border border-[#e6e8e9]">
-              <p className="text-[10px] font-black text-[#006d2f] mb-2 sm:mb-4 uppercase tracking-[0.2em]">REAL RESULTS</p>
+              <p className="text-[10px] font-black text-[#006d2f] mb-2 sm:mb-4 uppercase tracking-[0.2em]">HASIL NYATA</p>
               <div className="grid grid-cols-2 gap-2">
                 <div className="rounded-lg sm:rounded-xl bg-[#f2f4f4] h-16 sm:h-24 overflow-hidden grayscale-[0.2] hover:grayscale-0 transition-all">
                   <img
