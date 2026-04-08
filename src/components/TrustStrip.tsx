@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const TrustStrip: React.FC = () => {
   const items = [
@@ -13,12 +14,19 @@ const TrustStrip: React.FC = () => {
     <section className="bg-surface-container-low py-7 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4 items-start md:items-center">
         {items.map((item, idx) => (
-          <div key={idx} className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-2 md:gap-3">
+          <motion.div 
+            key={idx} 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+            className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-2 md:gap-3"
+          >
             <span className="material-symbols-outlined text-primary text-3xl md:text-2xl">{item.icon}</span>
             <span className="text-xs md:text-sm font-bold tracking-tight uppercase text-on-surface-variant">
               {item.text}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
