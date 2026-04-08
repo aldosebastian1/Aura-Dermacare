@@ -8,11 +8,11 @@ const Navbar: React.FC = () => {
           Aura Dermacare
         </span>
         <div className="hidden md:flex gap-8 items-center">
-          <a className="text-emerald-900 border-b-2 border-emerald-500 pb-1 font-headline font-bold tracking-tight" href="#">Treatments</a>
-          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#">Pricing</a>
-          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#">Process</a>
-          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#">Testimonials</a>
-          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#">FAQ</a>
+          <a className="text-emerald-900 border-b-2 border-emerald-500 pb-1 font-headline font-bold tracking-tight" href="#treatments">Treatments</a>
+          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#pricing">Pricing</a>
+          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#process">Process</a>
+          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#testimonials">Testimonials</a>
+          <a className="text-slate-600 font-medium hover:text-emerald-600 transition-colors duration-300" href="#faq">FAQ</a>
         </div>
         <a className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-sm flex items-center gap-2" href="https://wa.me/">
           <span className="material-symbols-outlined text-[20px]">chat</span>

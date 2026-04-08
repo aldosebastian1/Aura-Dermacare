@@ -28,7 +28,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-20 px-8 bg-surface-container-low">
+    <section id="faq" className="py-20 px-8 bg-surface-container-low">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl font-headline font-bold text-center mb-16 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
         <div className="space-y-4">

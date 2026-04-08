@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface-container-lowest px-8">
+    <section id="testimonials" className="py-24 bg-surface-container-lowest px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((rev, idx) => (

@@ -23,7 +23,7 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-8 bg-surface">
+    <section id="pricing" className="py-24 px-8 bg-surface">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-headline font-bold tracking-tight">Pilih Perjalanan Kulitmu</h2>
       </div>

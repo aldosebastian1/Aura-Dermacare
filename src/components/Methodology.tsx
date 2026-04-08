@@ -9,14 +9,14 @@ const Methodology: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface-container-low px-8 overflow-hidden">
+    <section id="process" className="py-24 bg-surface-container-low px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto editorial-grid items-center">
         <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
           <div className="relative">
-            <img 
-              alt="Clinical methodology" 
-              className="rounded-[2.5rem] w-full aspect-square object-cover shadow-xl" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEgEiz17thm2xHyezVgnwa1nTamfkfRqmdt5SgzlEF5ERgF_zW0FL7MnBamTnTW1rQgCZu8S-2OcBKM2Xt5Bx_6l05IK61LqM6y2itWGnFC47EVj9G6JisDPWjln2NlwT_rO41gqn0ge88INVJ-wSJ2Onv9yF7N5B52Q8qhmUFsKRZH85xNkqyurSuANv2_EW8xp6GJdcNjkkxKtBnTwuOHEJ4K394XxP6LJB00sqyOqiB7wp3pljJqcdqOy6uc1rViFi6RDcYr-Vp" 
+            <img
+              alt="Clinical methodology"
+              className="rounded-[2.5rem] w-full aspect-square object-cover shadow-xl"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEgEiz17thm2xHyezVgnwa1nTamfkfRqmdt5SgzlEF5ERgF_zW0FL7MnBamTnTW1rQgCZu8S-2OcBKM2Xt5Bx_6l05IK61LqM6y2itWGnFC47EVj9G6JisDPWjln2NlwT_rO41gqn0ge88INVJ-wSJ2Onv9yF7N5B52Q8qhmUFsKRZH85xNkqyurSuANv2_EW8xp6GJdcNjkkxKtBnTwuOHEJ4K394XxP6LJB00sqyOqiB7wp3pljJqcdqOy6uc1rViFi6RDcYr-Vp"
             />
             <div className="absolute -top-10 -right-10 w-48 h-48 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
           </div>
