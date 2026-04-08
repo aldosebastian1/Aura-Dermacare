@@ -20,12 +20,12 @@ const ProblemSection: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
           {problems.map((prob, idx) => (
             <div key={idx} className="group">
-              <div className="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">
-                <span className="material-symbols-outlined text-3xl group-hover:text-on-primary-container transition-colors">
+              <div className="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">
+                <span className="material-symbols-outlined text-2xl group-hover:text-on-primary-container transition-colors">
                   {prob.icon}
                 </span>
               </div>
-              <h3 className="text-xl font-bold mb-2">{prob.title}</h3>
+              <h3 className="text-lg font-bold mb-2">{prob.title}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{prob.desc}</p>
             </div>
           ))}
