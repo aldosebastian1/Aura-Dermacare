@@ -20,11 +20,11 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-surface-container-lowest px-8">
+    <section id="testimonials" className="py-16 lg:py-24 bg-surface-container-lowest px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((rev, idx) => (
-            <div key={idx} className="bg-surface-container-low p-8 rounded-[2rem] space-y-6 text-left">
+            <div key={idx} className="bg-surface-container-low p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] space-y-5 sm:space-y-6 text-left">
               <div className="flex gap-1 text-primary">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined fill-1">star</span>

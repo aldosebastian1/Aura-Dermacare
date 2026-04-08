@@ -10,12 +10,14 @@ const Langkah: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-surface-container-low px-8">
+    <section className="py-16 lg:py-24 bg-surface-container-low px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-headline font-bold text-center mb-16">5 Langkah Menuju Kulit Impian</h2>
-        <div className="relative flex flex-col md:flex-row justify-between gap-12 items-start">
+        <h2 className="text-3xl lg:text-4xl font-headline font-bold text-center mb-12 lg:mb-16">5 Langkah Menuju Kulit Impian</h2>
+        <div className="relative flex flex-col md:flex-row justify-between gap-12 items-center md:items-start text-center">
           {/* Progress Line (Hidden on Mobile) */}
           <div className="hidden md:block absolute top-12 left-12 right-12 h-[2px] bg-outline-variant/20 z-0"></div>
+          {/* Vertical Progress Line (Mobile Only) */}
+          <div className="md:hidden absolute top-10 bottom-12 left-1/2 w-[2px] bg-outline-variant/20 z-0 -translate-x-1/2"></div>
 
           {steps.map((step, idx) => (
             <div key={idx} className="relative z-10 flex flex-col items-center text-center max-w-[180px] group flex-1">

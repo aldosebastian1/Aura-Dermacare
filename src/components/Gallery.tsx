@@ -20,18 +20,18 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="results" className="py-24 px-8 bg-surface">
+    <section id="results" className="py-16 lg:py-24 px-6 lg:px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 lg:mb-16 gap-4 lg:gap-6">
           <div className="max-w-xl text-left">
-            <h2 className="text-4xl font-headline font-bold tracking-tight">Hasil yang bisa kamu harapkan</h2>
+            <h2 className="text-3xl sm:text-4xl font-headline font-bold tracking-tight">Hasil yang bisa kamu harapkan</h2>
             <p className="text-on-surface-variant mt-4">Bukti nyata transformasi pasien kami melalui pendekatan medis yang presisi.</p>
           </div>
           <button className="text-primary font-bold flex items-center gap-2 group">
             Lihat Lebih Banyak <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {images.map((img, idx) => (
             <div key={idx} className="space-y-4">
               <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden shadow-sm h-64">

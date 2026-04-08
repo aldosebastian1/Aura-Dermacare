@@ -28,9 +28,9 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 px-8 bg-surface-container-low">
+    <section id="faq" className="py-16 lg:py-20 px-6 lg:px-8 bg-surface-container-low">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-headline font-bold text-center mb-16 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
+        <h2 className="text-3xl lg:text-4xl font-headline font-bold text-center mb-12 lg:mb-16 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
         <div className="space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = activeIndex === idx;
@@ -42,7 +42,7 @@ const FAQ: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
-                  className="w-full p-6 flex justify-between items-center text-left font-bold text-lg hover:bg-surface-container-lowest transition-colors group"
+                  className="w-full p-5 lg:p-6 flex justify-between items-center text-left font-bold text-base lg:text-lg hover:bg-surface-container-lowest transition-colors group gap-4"
                 >
                   <span className={`${isOpen ? 'text-primary' : 'text-on-surface'} transition-colors`}>
                     {faq.q}
@@ -63,7 +63,7 @@ const FAQ: React.FC = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-5 text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/5 pt-1">
+                      <div className="px-5 lg:px-6 pb-5 text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/5 pt-3">
                         {faq.a}
                       </div>
                     </motion.div>

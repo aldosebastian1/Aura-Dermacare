@@ -9,9 +9,9 @@ const Methodology: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-24 bg-surface-container-low px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto editorial-grid items-center">
-        <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
+    <section id="process" className="py-16 lg:py-24 bg-surface-container-low px-6 lg:px-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid items-center gap-12 lg:gap-0">
+        <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 w-full">
           <div className="relative">
             <img
               alt="Clinical methodology"
@@ -21,14 +21,14 @@ const Methodology: React.FC = () => {
             <div className="absolute -top-10 -right-10 w-48 h-48 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-7 order-1 lg:order-2 space-y-10">
+        <div className="col-span-12 lg:col-span-7 order-1 lg:order-2 space-y-8 lg:space-y-10">
           <div>
-            <h2 className="text-4xl font-headline font-bold tracking-tight mb-6 leading-tight">Perawatan sesuai kondisi kulit kamu</h2>
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold tracking-tight mb-4 lg:mb-6 leading-tight">Perawatan sesuai kondisi kulit kamu</h2>
             <p className="text-lg text-on-surface-variant leading-relaxed italic">
               "Kami percaya bahwa setiap wajah memiliki cerita dan kebutuhan yang berbeda. Tidak ada 'one-size-fits-all' di Aura Dermacare."
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {steps.map((step, idx) => (
               <div key={idx} className="space-y-3">
                 <span className="text-primary font-bold text-lg">{step.num}. {step.title}</span>

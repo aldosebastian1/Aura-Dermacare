@@ -23,17 +23,17 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 px-8 bg-surface">
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-headline font-bold tracking-tight">Pilih Perjalanan Kulitmu</h2>
+    <section id="pricing" className="py-16 lg:py-24 px-6 lg:px-8 bg-surface">
+      <div className="max-w-7xl mx-auto text-center mb-12 lg:mb-16">
+        <h2 className="text-3xl sm:text-4xl font-headline font-bold tracking-tight">Pilih Perjalanan Kulitmu</h2>
       </div>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         {plans.map((plan, idx) => (
           <div 
             key={idx} 
-            className={`p-8 rounded-[2rem] border transition-all relative ${
+            className={`p-6 lg:p-8 rounded-[2rem] border transition-all relative ${
               plan.isPopular 
-                ? 'bg-surface-container-lowest border-primary-container shadow-xl scale-105 z-10' 
+                ? 'bg-surface-container-lowest border-primary-container shadow-xl scale-100 md:scale-105 z-10' 
                 : 'bg-surface-container border-outline-variant/10 hover:border-primary/30'
             }`}
           >

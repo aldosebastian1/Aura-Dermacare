@@ -11,13 +11,13 @@ const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section id="treatments" className="py-20 pt-10 px-8 bg-surface">
+    <section id="treatments" className="py-16 lg:py-20 pt-10 px-6 lg:px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-15">
+        <div className="mb-10 lg:mb-15">
           <span className="text-sm font-bold text-primary tracking-[0.2em] uppercase">Understanding Your Skin</span>
-          <h2 className="text-4xl lg:text-5xl font-headline font-bold mt-4 tracking-tight max-w-2xl">Masalah yang sering dialami oleh pasien kami...</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold mt-4 tracking-tight max-w-2xl">Masalah yang sering dialami oleh pasien kami...</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-10 lg:gap-y-16">
           {problems.map((prob, idx) => (
             <div key={idx} className="group flex flex-col items-start text-left">
               <div className="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">

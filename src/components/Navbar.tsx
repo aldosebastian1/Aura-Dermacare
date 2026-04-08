@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const sectionIds = ['home', 'treatments', 'process', 'pricing', 'results', 'faq'];
@@ -40,11 +41,11 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="h-21 sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <a href="#home" className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase">
+      <div className="flex justify-between items-center px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+        <a href="#home" className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase relative z-[60]">
           Aura Dermacare
         </a>
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden lg:flex gap-8 items-center">
           {navLinks.map((link) => (
             <a
               key={link.id}
@@ -58,10 +59,50 @@ const Navbar: React.FC = () => {
             </a>
           ))}
         </div>
-        <a className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-sm flex items-center gap-2" href="https://wa.me/">
-          <span className="material-symbols-outlined text-[20px]">chat</span>
-          Chat WhatsApp
-        </a>
+        <div className="flex items-center gap-4 relative z-[60]">
+          <a className="hidden sm:flex bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-sm items-center gap-2" href="https://wa.me/">
+            <span className="material-symbols-outlined text-[20px]">chat</span>
+            Chat WhatsApp
+          </a>
+          <button 
+            className="lg:hidden text-emerald-900 p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <span className="material-symbols-outlined text-3xl">
+              {isMobileMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      <div 
+        className={`lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl transition-all duration-300 ease-in-out border-t border-slate-100 overflow-hidden ${
+          isMobileMenuOpen 
+            ? 'max-h-[500px] opacity-100 visible' 
+            : 'max-h-0 opacity-0 invisible'
+        }`}
+      >
+        <div className="flex flex-col px-6 py-8 gap-6">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`text-xl font-headline tracking-tight transition-colors ${
+                activeSection === link.id
+                  ? 'text-emerald-900 font-bold'
+                  : 'text-slate-600 font-bold hover:text-emerald-900'
+              }`}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a className="flex justify-center bg-primary-container text-on-primary-container px-6 py-3.5 mt-2 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-sm items-center gap-2" href="https://wa.me/">
+            <span className="material-symbols-outlined text-[20px]">chat</span>
+            Chat WhatsApp
+          </a>
+        </div>
       </div>
     </nav>
   );

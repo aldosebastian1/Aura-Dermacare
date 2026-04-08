@@ -11,11 +11,11 @@ const TrustStrip: React.FC = () => {
 
   return (
     <section className="bg-surface-container-low py-7 px-5">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-8 md:gap-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4 items-start md:items-center">
         {items.map((item, idx) => (
-          <div key={idx} className="flex items-center gap-3">
-            <span className="material-symbols-outlined text-primary">{item.icon}</span>
-            <span className="text-sm font-bold tracking-tight uppercase text-on-surface-variant">
+          <div key={idx} className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-2 md:gap-3">
+            <span className="material-symbols-outlined text-primary text-3xl md:text-2xl">{item.icon}</span>
+            <span className="text-xs md:text-sm font-bold tracking-tight uppercase text-on-surface-variant">
               {item.text}
             </span>
           </div>

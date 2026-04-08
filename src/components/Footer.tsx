@@ -3,8 +3,8 @@ import { Instagram, Youtube, Music2 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-surface w-full pt-20 pb-10 text-left border-t border-outline-variant/10">
-      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12 font-body text-sm">
+    <footer className="bg-surface w-full pt-16 lg:pt-20 pb-10 text-left border-t border-outline-variant/10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 font-body text-sm">
         <div className="col-span-1 md:col-span-1 space-y-4">
           <span className="text-lg font-bold text-emerald-900 tracking-tighter uppercase block">AURA DERMACARE</span>
           <p className="text-slate-500 leading-relaxed font-medium">Pusat estetika medis terpercaya dengan fokus pada kesehatan kulit jangka panjang dan hasil natural.</p>
@@ -40,9 +40,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8 mt-10 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-10 pt-8 border-t border-outline-variant/10 flex flex-col sm:flex-row justify-between items-center gap-6">
         <p className="text-slate-400 text-xs">© 2024 Aura Dermacare. All rights reserved.</p>
-        <div className="flex gap-5  items-center">
+        <div className="flex gap-5 items-center">
           <a className="text-slate-400 hover:text-emerald-600 transition-colors" href="#" aria-label="Instagram">
             <Instagram size={18} />
           </a>
