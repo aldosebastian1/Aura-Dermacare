@@ -1,9 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Bonus: React.FC = () => {
   return (
     <section className="py-16 lg:py-24 px-6 lg:px-8 bg-surface">
-      <div className="max-w-5xl mx-auto bg-primary rounded-[2rem] lg:rounded-[3rem] p-8 lg:p-12 text-on-primary relative overflow-hidden text-left">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="max-w-5xl mx-auto bg-primary rounded-[2rem] lg:rounded-[3rem] p-8 lg:p-12 text-on-primary relative overflow-hidden text-left"
+      >
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white opacity-5 rounded-full"></div>
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 pl-0 sm:pl-4">
           <div className="space-y-6 max-w-lg">
@@ -29,7 +36,7 @@ const Bonus: React.FC = () => {
             <a href="https://wa.me/628111111111?text=Halo%20Aura%20Dermacare,%20saya%20ingin%20claim%20bonus%20booking!" className="inline-block w-full sm:w-auto bg-primary-container text-on-primary-container px-8 lg:px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all whitespace-nowrap">Klaim Bonus Sekarang</a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
