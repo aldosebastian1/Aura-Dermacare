@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import WhatsAppIcon from './WhatsAppIcon';
 
 const Hero: React.FC = () => {
@@ -6,7 +7,12 @@ const Hero: React.FC = () => {
     <section id="beranda" className="relative lg:min-h-[750px] flex items-start pt-12 sm:pt-5 pb-6 px-6 lg:px-8 overflow-hidden bg-white/50 scroll-mt-24">
       <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid">
         {/* Left Content Column */}
-        <div className="col-span-12 lg:col-span-7 flex flex-col space-y-8">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="col-span-12 lg:col-span-7 flex flex-col space-y-8"
+        >
           <div className="space-y-3">
             <span className="inline-block px-4 py-1.5 rounded-full bg-[#93f2f2]/30 text-[#006a6a] text-xs font-bold tracking-widest uppercase">
               Revolusi Kulit
@@ -54,10 +60,15 @@ const Hero: React.FC = () => {
               +5000 PASIEN • REVIEW 4.8+ • TENAGA BERPENGALAMAN
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Visual Column */}
-        <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 w-full aspect-square sm:aspect-auto">
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 w-full aspect-square sm:aspect-auto"
+        >
           <div className="rounded-2xl lg:asymmetric-border overflow-hidden bg-[#f2f4f4] h-[350px] sm:h-[550px] lg:h-[650px] relative shadow-[0_32px_64px_rgba(25,28,29,0.12)]">
             <img
               alt="Klinik Kecantikan Aura Dermacare - Fasilitas Mewah dan Steril"
@@ -66,7 +77,12 @@ const Hero: React.FC = () => {
             />
 
             {/* Overlapping Result Card */}
-            <div className="absolute bottom-4 sm:bottom-10 right-4 sm:right-auto bg-white p-4 sm:p-7 rounded-2xl sm:rounded-[2rem] shadow-[0_20px_40px_rgba(25,28,29,0.08)] w-[85%] sm:w-auto max-w-[260px] border border-[#e6e8e9]">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="absolute bottom-4 sm:bottom-10 right-4 sm:right-auto bg-white p-4 sm:p-7 rounded-2xl sm:rounded-[2rem] shadow-[0_20px_40px_rgba(25,28,29,0.08)] w-[85%] sm:w-auto max-w-[260px] border border-[#e6e8e9]"
+            >
               <p className="text-[10px] font-black text-[#006d2f] mb-2 sm:mb-4 uppercase tracking-[0.2em]">HASIL NYATA</p>
               <div className="grid grid-cols-2 gap-2">
                 <div className="rounded-lg sm:rounded-xl bg-[#f2f4f4] h-16 sm:h-24 overflow-hidden grayscale-[0.2] hover:grayscale-0 transition-all">
@@ -82,9 +98,9 @@ const Hero: React.FC = () => {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
