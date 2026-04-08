@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Methodology: React.FC = () => {
   const steps = [
@@ -11,7 +12,13 @@ const Methodology: React.FC = () => {
   return (
     <section id="proses-perawatan" className="py-16 lg:py-24 bg-surface-container-low px-6 lg:px-8 overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid items-center gap-12 lg:gap-0">
-        <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 w-full">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="col-span-12 lg:col-span-5 order-2 lg:order-1 w-full"
+        >
           <div className="relative">
             <img
               alt="Metodologi Perawatan Klinik Kecantikan Aura Dermacare"
@@ -20,8 +27,14 @@ const Methodology: React.FC = () => {
             />
             <div className="absolute -top-10 -right-10 w-48 h-48 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
           </div>
-        </div>
-        <div className="ml-10 col-span-12 lg:col-span-7 order-1 lg:order-2 space-y-8 lg:space-y-10">
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="ml-10 col-span-12 lg:col-span-7 order-1 lg:order-2 space-y-8 lg:space-y-10"
+        >
           <div>
             <h2 className="text-3xl lg:text-4xl font-headline font-bold tracking-tight mb-4 lg:mb-6 leading-tight">Perawatan sesuai kondisi kulit kamu</h2>
             <p className="text-lg text-on-surface-variant leading-relaxed italic">
@@ -37,7 +50,7 @@ const Methodology: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
