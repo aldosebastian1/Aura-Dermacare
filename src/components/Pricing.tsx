@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Pricing: React.FC = () => {
   const plans = [
@@ -24,13 +25,23 @@ const Pricing: React.FC = () => {
 
   return (
     <section id="paket-harga" className="py-16 lg:py-24 px-6 lg:px-8 bg-surface scroll-mt-24">
-      <div className="max-w-7xl mx-auto text-center mb-12 lg:mb-16">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="max-w-7xl mx-auto text-center mb-12 lg:mb-16"
+      >
         <h2 className="text-3xl sm:text-4xl font-headline font-bold tracking-tight">Pilih Perjalanan Kulitmu</h2>
-      </div>
+      </motion.div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         {plans.map((plan, idx) => (
-          <div 
+          <motion.div 
             key={idx} 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: idx * 0.15 }}
             className={`p-6 lg:p-8 rounded-[2rem] border transition-all relative ${
               plan.isPopular 
                 ? 'bg-surface-container-lowest border-primary-container shadow-xl scale-100 md:scale-105 z-10' 
@@ -61,7 +72,7 @@ const Pricing: React.FC = () => {
             }`}>
               Pilih Paket
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
