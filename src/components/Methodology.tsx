@@ -2,10 +2,10 @@ import React from 'react';
 
 const Methodology: React.FC = () => {
   const steps = [
-    { num: '01', title: 'Assessment', subtitle: 'Konsultasi & Skin Assessment', desc: 'Analisa mendalam menggunakan teknologi scanner terbaru.' },
-    { num: '02', title: 'Recommendation', subtitle: 'Rekomendasi Paket', desc: 'Pilihan treatment yang hanya fokus pada masalah target.' },
-    { num: '03', title: 'Procedure', subtitle: 'Treatment Sesuai Prosedur', desc: 'Eksekusi steril oleh tenaga ahli profesional kami.' },
-    { num: '04', title: 'Monitoring', subtitle: 'Evaluasi & Follow Up', desc: 'Memastikan hasil bertahan lama dan kulit tetap sehat.' },
+    { num: '01', title: 'Pemeriksaan', subtitle: 'Konsultasi & Skin Assessment', desc: 'Analisa mendalam menggunakan teknologi scanner terbaru.' },
+    { num: '02', title: 'Rekomendasi', subtitle: 'Rekomendasi Paket', desc: 'Pilihan treatment yang hanya fokus pada masalah target.' },
+    { num: '03', title: 'Prosedur', subtitle: 'Treatment Sesuai Prosedur', desc: 'Eksekusi steril oleh tenaga ahli profesional kami.' },
+    { num: '04', title: 'Pemantauan', subtitle: 'Evaluasi & Follow Up', desc: 'Memastikan hasil bertahan lama dan kulit tetap sehat.' },
   ];
 
   return (
