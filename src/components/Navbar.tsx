@@ -43,11 +43,11 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Treatments', href: '#perawatan', id: 'perawatan' },
-    { name: 'Our Process', href: '#proses-perawatan', id: 'proses-perawatan' },
-    { name: 'Pricing', href: '#paket-harga', id: 'paket-harga' },
-    { name: 'Real Results', href: '#galeri-hasil', id: 'galeri-hasil' },
-    { name: 'FAQ', href: '#tanya-jawab', id: 'tanya-jawab' },
+    { name: 'Perawatan', href: '#perawatan', id: 'perawatan' },
+    { name: 'Proses Kami', href: '#proses-perawatan', id: 'proses-perawatan' },
+    { name: 'Paket Harga', href: '#paket-harga', id: 'paket-harga' },
+    { name: 'Galeri Hasil', href: '#galeri-hasil', id: 'galeri-hasil' },
+    { name: 'Tanya Jawab', href: '#tanya-jawab', id: 'tanya-jawab' },
   ];
 
   return (
