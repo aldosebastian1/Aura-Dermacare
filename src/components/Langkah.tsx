@@ -18,17 +18,17 @@ const Langkah: React.FC = () => {
           <div className="hidden md:block absolute top-12 left-12 right-12 h-[2px] bg-outline-variant/20 z-0"></div>
           
           {steps.map((step, idx) => (
-            <div key={idx} className="relative z-10 flex flex-col items-center text-center max-w-[200px] group flex-1">
-              <div className={`w-24 h-24 rounded-full flex items-center justify-center border-4 border-surface shadow-md group-hover:scale-110 transition-transform ${
+            <div key={idx} className="relative z-10 flex flex-col items-center text-center max-w-[180px] group flex-1">
+              <div className={`w-20 h-20 rounded-full flex items-center justify-center border-4 border-surface shadow-md group-hover:scale-110 transition-transform ${
                 step.highlight ? 'bg-primary-container' : 'bg-white'
               }`}>
-                <span className={`material-symbols-outlined text-3xl ${
+                <span className={`material-symbols-outlined text-2xl ${
                   step.highlight ? 'text-on-primary-container' : 'text-primary'
                 }`}>
                   {step.icon}
                 </span>
               </div>
-              <p className="mt-6 font-bold text-sm">{step.text}</p>
+              <p className="mt-6 font-bold text-sm tracking-tight leading-tight">{step.text}</p>
             </div>
           ))}
         </div>
