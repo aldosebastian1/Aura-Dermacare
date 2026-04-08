@@ -9,6 +9,7 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Bonus from './components/Bonus';
 import FAQ from './components/FAQ';
+import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Testimonials />
         <Bonus />
         <FAQ />
+        <CallToAction />
       </main>
       <Footer />
     </div>
