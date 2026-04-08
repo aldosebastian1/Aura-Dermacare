@@ -52,13 +52,15 @@ const Pricing: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <button className={`w-full py-3 rounded-xl font-bold transition-all ${
+            <a 
+              href={`https://wa.me/628111111111?text=Halo%20Aura%20Dermacare,%20saya%20tertarik%20dengan%20paket%20${plan.title}!`}
+              className={`w-full py-3 rounded-xl font-bold transition-all flex justify-center ${
               plan.isPopular 
                 ? 'bg-primary-container text-on-primary-container hover:shadow-lg' 
                 : 'border border-primary text-primary hover:bg-primary hover:text-white'
             }`}>
               Pilih Paket
-            </button>
+            </a>
           </div>
         ))}
       </div>
