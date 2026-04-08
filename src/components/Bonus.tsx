@@ -26,7 +26,7 @@ const Bonus: React.FC = () => {
           </div>
           <div className="w-full md:w-auto bg-white/10 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-white/20 text-center space-y-4 mt-4 md:mt-0">
             <p className="text-xs uppercase tracking-widest font-bold">Booking via WA</p>
-            <button className="w-full sm:w-auto bg-primary-container text-on-primary-container px-8 lg:px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all whitespace-nowrap">Claim Bonus Now</button>
+            <a href="https://wa.me/628111111111?text=Halo%20Aura%20Dermacare,%20saya%20ingin%20claim%20bonus%20booking!" className="inline-block w-full sm:w-auto bg-primary-container text-on-primary-container px-8 lg:px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all whitespace-nowrap">Claim Bonus Now</a>
           </div>
         </div>
       </div>
