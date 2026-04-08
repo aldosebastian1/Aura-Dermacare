@@ -10,7 +10,7 @@ const TrustStrip: React.FC = () => {
   ];
 
   return (
-    <section className="bg-surface-container-low py-12 px-8">
+    <section className="bg-surface-container-low py-7 px-5">
       <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-8 md:gap-4">
         {items.map((item, idx) => (
           <div key={idx} className="flex items-center gap-3">
