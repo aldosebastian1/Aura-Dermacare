@@ -16,15 +16,13 @@ const Langkah: React.FC = () => {
         <div className="relative flex flex-col md:flex-row justify-between gap-12 items-start">
           {/* Progress Line (Hidden on Mobile) */}
           <div className="hidden md:block absolute top-12 left-12 right-12 h-[2px] bg-outline-variant/20 z-0"></div>
-          
+
           {steps.map((step, idx) => (
             <div key={idx} className="relative z-10 flex flex-col items-center text-center max-w-[180px] group flex-1">
-              <div className={`w-20 h-20 rounded-full flex items-center justify-center border-4 border-surface shadow-md group-hover:scale-110 transition-transform ${
-                step.highlight ? 'bg-primary-container' : 'bg-white'
-              }`}>
-                <span className={`material-symbols-outlined text-2xl ${
-                  step.highlight ? 'text-on-primary-container' : 'text-primary'
+              <div className={`w-20 h-20 rounded-full flex items-center justify-center border-4 border-surface shadow-md group-hover:scale-110 transition-transform ${step.highlight ? 'bg-primary-container' : 'bg-white'
                 }`}>
+                <span className={`material-symbols-outlined text-2xl ${step.highlight ? 'text-on-primary-container' : 'text-primary'
+                  }`}>
                   {step.icon}
                 </span>
               </div>
