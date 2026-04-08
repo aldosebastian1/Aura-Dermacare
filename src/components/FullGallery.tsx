@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const FullGallery: React.FC = () => {
   const images = [
@@ -47,13 +48,20 @@ const FullGallery: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {images.map((img, idx) => (
-            <div key={idx} className="space-y-4">
+            <motion.div 
+              key={idx} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: (idx % 3) * 0.15 }}
+              className="space-y-4"
+            >
               <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden shadow-sm h-64 sm:h-72">
                 <img className="w-full h-full object-cover" src={img.before} alt={`Sebelum ${img.tag} - Aura Dermacare`} />
                 <img className="w-full h-full object-cover" src={img.after} alt={`Sesudah ${img.tag} - Aura Dermacare`} />
               </div>
               <p className="font-bold text-center">{img.tag}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
