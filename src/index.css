@@ -8,6 +8,16 @@
   body {
     @apply bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container;
   }
+
+  /* Standardized scroll anchor offsets for sticky navbar (~84px) */
+  section[id] {
+    scroll-margin-top: 5.25rem;
+  }
+
+  /* Absolute top flush for Home/Logo link */
+  #home {
+    scroll-margin-top: 0 !important;
+  }
 }
 
 @layer components {
