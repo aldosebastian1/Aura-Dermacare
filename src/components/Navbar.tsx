@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sectionIds = ['home', 'treatments', 'process', 'pricing', 'results', 'faq'];
+    const sectionIds = ['beranda', 'perawatan', 'proses-perawatan', 'paket-harga', 'galeri-hasil', 'tanya-jawab'];
 
     const observerOptions = {
       root: null,
@@ -32,18 +32,32 @@ const Navbar: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, '', '#' + targetId);
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const navLinks = [
-    { name: 'Treatments', href: '#treatments', id: 'treatments' },
-    { name: 'Our Process', href: '#process', id: 'process' },
-    { name: 'Pricing', href: '#pricing', id: 'pricing' },
-    { name: 'Real Results', href: '#results', id: 'results' },
-    { name: 'FAQ', href: '#faq', id: 'faq' },
+    { name: 'Treatments', href: '#perawatan', id: 'perawatan' },
+    { name: 'Our Process', href: '#proses-perawatan', id: 'proses-perawatan' },
+    { name: 'Pricing', href: '#paket-harga', id: 'paket-harga' },
+    { name: 'Real Results', href: '#galeri-hasil', id: 'galeri-hasil' },
+    { name: 'FAQ', href: '#tanya-jawab', id: 'tanya-jawab' },
   ];
 
   return (
     <nav className="h-21 sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
       <div className="flex justify-between items-center px-6 lg:px-8 py-4 max-w-7xl mx-auto">
-        <a href="#home" className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase relative z-[60]">
+        <a 
+          href="#beranda" 
+          onClick={(e) => handleNavClick(e, 'beranda')}
+          className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase relative z-[60]"
+        >
           Aura Dermacare
         </a>
         <div className="hidden lg:flex gap-8 items-center">
@@ -51,6 +65,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.id}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.id)}
               className={`nav-link-animated font-headline tracking-tight ${activeSection === link.id
                 ? 'active text-emerald-900 font-bold'
                 : 'text-slate-600 font-bold hover:text-emerald-800'
@@ -89,7 +104,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.id}
               href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.id)}
               className={`text-xl font-headline tracking-tight transition-colors ${
                 activeSection === link.id
                   ? 'text-emerald-900 font-bold'
