@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Langkah: React.FC = () => {
   const steps = [
@@ -20,7 +21,14 @@ const Langkah: React.FC = () => {
           <div className="md:hidden absolute top-10 bottom-12 left-1/2 w-[2px] bg-outline-variant/20 z-0 -translate-x-1/2"></div>
 
           {steps.map((step, idx) => (
-            <div key={idx} className="relative z-10 flex flex-col items-center text-center max-w-[180px] group flex-1">
+            <motion.div 
+              key={idx} 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: idx * 0.15 }}
+              className="relative z-10 flex flex-col items-center text-center max-w-[180px] group flex-1"
+            >
               <div className={`w-20 h-20 rounded-full flex items-center justify-center border-4 border-surface shadow-md group-hover:scale-110 transition-transform ${step.highlight ? 'bg-primary-container' : 'bg-white'
                 }`}>
                 <span className={`material-symbols-outlined text-2xl ${step.highlight ? 'text-on-primary-container' : 'text-primary'
@@ -29,7 +37,7 @@ const Langkah: React.FC = () => {
                 </span>
               </div>
               <p className="mt-6 font-bold text-sm tracking-tight leading-tight">{step.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
