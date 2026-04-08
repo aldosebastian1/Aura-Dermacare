@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram, Youtube, Music2 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -39,16 +40,23 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between gap-4">
-        <p className="text-slate-400">© 2024 Aura Dermacare. All rights reserved.</p>
-        <div className="flex gap-6">
-          <a className="text-slate-400 hover:text-emerald-600" href="#">Instagram</a>
-          <a className="text-slate-400 hover:text-emerald-600" href="#">TikTok</a>
-          <a className="text-slate-400 hover:text-emerald-600" href="#">YouTube</a>
+      <div className="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p className="text-slate-400 text-xs">© 2024 Aura Dermacare. All rights reserved.</p>
+        <div className="flex gap-6 items-center">
+          <a className="text-slate-400 hover:text-emerald-600 transition-colors" href="#" aria-label="Instagram">
+            <Instagram size={18} />
+          </a>
+          <a className="text-slate-400 hover:text-emerald-600 transition-colors" href="#" aria-label="TikTok">
+            <Music2 size={18} />
+          </a>
+          <a className="text-slate-400 hover:text-emerald-600 transition-colors" href="#" aria-label="YouTube">
+            <Youtube size={18} />
+          </a>
         </div>
       </div>
     </footer>
   );
 };
+
 
 export default Footer;
