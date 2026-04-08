@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+    <nav className="h-21 sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <span className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase">
           Aura Dermacare
