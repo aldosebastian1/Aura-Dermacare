@@ -12,7 +12,7 @@ const CallToAction: React.FC = () => {
         </p>
 
         <a
-          href="https://wa.me/628123456789"
+          href="https://wa.me/628111111111?text=Halo%20Aura%20Dermacare,%20saya%20ingin%20segera%20konsultasi!"
           className="bg-[#2ce071] text-[#0a2e16] hover:bg-[#28cc66] transition-all duration-200 py-4 px-10 rounded-full font-bold text-xl flex items-center gap-3 w-full sm:w-auto justify-center active:scale-95 shadow-sm"
         >
           <span className="material-symbols-outlined text-2xl font-medium">forum</span>
