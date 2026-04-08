@@ -38,12 +38,12 @@ const Pricing: React.FC = () => {
             }`}
           >
             {plan.isPopular && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-xs font-bold uppercase">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest leading-none">
                 Terpopuler
               </div>
             )}
-            <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
-            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-6">{plan.category}</p>
+            <h3 className="text-lg font-bold mb-1">{plan.title}</h3>
+            <p className="text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-6">{plan.category}</p>
             <ul className="space-y-4 text-sm text-on-surface-variant mb-10 text-left">
               {plan.features.map((feat, fIdx) => (
                 <li key={fIdx} className="flex gap-3">
