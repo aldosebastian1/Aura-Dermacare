@@ -21,7 +21,7 @@ const Methodology: React.FC = () => {
             <div className="absolute -top-10 -right-10 w-48 h-48 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-7 order-1 lg:order-2 space-y-8 lg:space-y-10">
+        <div className="ml-10 col-span-12 lg:col-span-7 order-1 lg:order-2 space-y-8 lg:space-y-10">
           <div>
             <h2 className="text-3xl lg:text-4xl font-headline font-bold tracking-tight mb-4 lg:mb-6 leading-tight">Perawatan sesuai kondisi kulit kamu</h2>
             <p className="text-lg text-on-surface-variant leading-relaxed italic">
