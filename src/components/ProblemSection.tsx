@@ -11,21 +11,21 @@ const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-10 px-8 bg-surface">
-      <div className="max-w-7xl mx-auto ">
-        <div className="mb-16">
+    <section className="py-20 px-8 bg-surface">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-20">
           <span className="text-sm font-bold text-primary tracking-[0.2em] uppercase">Understanding Your Skin</span>
-          <h2 className="text-4xl font-headline font-bold mt-4 tracking-tight">Masalah yang sering dialami...</h2>
+          <h2 className="text-4xl lg:text-5xl font-headline font-bold mt-4 tracking-tight max-w-2xl">Masalah yang sering dialami oleh pasien kami...</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           {problems.map((prob, idx) => (
-            <div key={idx} className="group ">
+            <div key={idx} className="group flex flex-col items-start text-left">
               <div className="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 transition-colors group-hover:bg-primary-container">
                 <span className="material-symbols-outlined text-2xl group-hover:text-on-primary-container transition-colors">
                   {prob.icon}
                 </span>
               </div>
-              <h3 className="text-lg font-bold mb-2">{prob.title}</h3>
+              <h3 className="text-lg font-bold mb-3">{prob.title}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed max-w-[300px]">{prob.desc}</p>
             </div>
           ))}
