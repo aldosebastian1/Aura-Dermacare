@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Gallery: React.FC = () => {
   const images = [
@@ -23,23 +24,43 @@ const Gallery: React.FC = () => {
     <section id="galeri-hasil" className="py-16 lg:py-24 px-6 lg:px-8 bg-surface scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 lg:mb-16 gap-4 lg:gap-6">
-          <div className="max-w-xl text-left">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-xl text-left"
+          >
             <h2 className="text-3xl sm:text-4xl font-headline font-bold tracking-tight">Hasil yang bisa kamu harapkan</h2>
             <p className="text-on-surface-variant mt-4">Bukti nyata transformasi pasien kami melalui pendekatan medis yang presisi.</p>
-          </div>
-          <a href="#semua-galeri" className="text-primary font-bold flex items-center gap-2 group">
+          </motion.div>
+          <motion.a 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            href="#semua-galeri" 
+            className="text-primary font-bold flex items-center gap-2 group"
+          >
             Lihat Lebih Banyak <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </a>
+          </motion.a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {images.map((img, idx) => (
-            <div key={idx} className="space-y-4">
+            <motion.div 
+              key={idx} 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: idx * 0.15 }}
+              className="space-y-4"
+            >
               <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden shadow-sm h-64">
                 <img className="w-full h-full object-cover" src={img.before} alt={`Sebelum ${img.tag} - Aura Dermacare`} />
                 <img className="w-full h-full object-cover" src={img.after} alt={`Sesudah ${img.tag} - Aura Dermacare`} />
               </div>
               <p className="text-sm font-bold text-center">{img.tag}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
