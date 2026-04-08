@@ -14,7 +14,7 @@ const ProblemSection: React.FC = () => {
     <section id="perawatan" className="py-16 lg:py-20 pt-10 px-6 lg:px-8 bg-surface scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 lg:mb-15">
-          <span className="text-sm font-bold text-primary tracking-[0.2em] uppercase">Understanding Your Skin</span>
+          <span className="text-sm font-bold text-primary tracking-[0.2em] uppercase">Memahami Kondisi Kulit Anda</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold mt-4 tracking-tight max-w-2xl">Masalah yang sering dialami oleh pasien kami...</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-10 lg:gap-y-16">
