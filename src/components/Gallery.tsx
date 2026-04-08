@@ -20,7 +20,7 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="treatments" className="py-24 px-8 bg-surface">
+    <section id="results" className="py-24 px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl text-left">

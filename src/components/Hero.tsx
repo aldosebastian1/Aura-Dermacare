@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[750px] flex items-start pt-5 pb-6 px-8 overflow-hidden bg-white/50">
+    <section id="home" className="relative min-h-[750px] flex items-start pt-5 pb-6 px-8 overflow-hidden bg-white/50">
       <div className="max-w-7xl mx-auto editorial-grid">
         {/* Left Content Column */}
         <div className="col-span-12 lg:col-span-7 flex flex-col space-y-8">

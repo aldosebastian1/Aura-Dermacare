@@ -11,7 +11,7 @@ const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 pt-10 px-8 bg-surface">
+    <section id="treatments" className="py-20 pt-10 px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
         <div className="mb-15">
           <span className="text-sm font-bold text-primary tracking-[0.2em] uppercase">Understanding Your Skin</span>

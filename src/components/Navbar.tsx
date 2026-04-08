@@ -4,7 +4,7 @@ const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
-    const sectionIds = ['treatments', 'pricing', 'process', 'testimonials', 'faq'];
+    const sectionIds = ['home', 'treatments', 'process', 'pricing', 'results', 'faq'];
 
     const observerOptions = {
       root: null,
@@ -32,18 +32,18 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Treatments', href: '#treatments', id: 'treatments' },
+    { name: 'Our Process', href: '#process', id: 'process' },
     { name: 'Pricing', href: '#pricing', id: 'pricing' },
-    { name: 'Process', href: '#process', id: 'process' },
-    { name: 'Testimonials', href: '#testimonials', id: 'testimonials' },
+    { name: 'Real Results', href: '#results', id: 'results' },
     { name: 'FAQ', href: '#faq', id: 'faq' },
   ];
 
   return (
     <nav className="h-21 sticky top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <span className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase">
+        <a href="#home" className="text-xl font-black text-emerald-900 tracking-tighter font-headline uppercase">
           Aura Dermacare
-        </span>
+        </a>
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
             <a
