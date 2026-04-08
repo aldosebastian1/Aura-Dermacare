@@ -3,7 +3,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative lg:min-h-[750px] flex items-start pt-12 sm:pt-5 pb-6 px-6 lg:px-8 overflow-hidden bg-white/50 scroll-mt-24">
+    <section id="beranda" className="relative lg:min-h-[750px] flex items-start pt-12 sm:pt-5 pb-6 px-6 lg:px-8 overflow-hidden bg-white/50 scroll-mt-24">
       <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid">
         {/* Left Content Column */}
         <div className="col-span-12 lg:col-span-7 flex flex-col space-y-8">
@@ -25,7 +25,15 @@ const Hero: React.FC = () => {
               <WhatsAppIcon size={24} className="sm:w-6 sm:h-6 w-5 h-5" />
               Chat WhatsApp
             </a>
-            <a href="#pricing" className="bg-[#f8fafa] w-full sm:w-auto justify-center border-2 border-[#e1e3e3] flex items-center text-[#191c1d] px-6 sm:px-8 py-4 rounded-full font-bold text-base hover:bg-[#f2f4f4] transition-all">
+            <a 
+              href="#paket-harga" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('paket-harga')?.scrollIntoView({ behavior: 'smooth' });
+                window.history.pushState(null, '', '#paket-harga');
+              }}
+              className="bg-[#f8fafa] w-full sm:w-auto justify-center border-2 border-[#e1e3e3] flex items-center text-[#191c1d] px-6 sm:px-8 py-4 rounded-full font-bold text-base hover:bg-[#f2f4f4] transition-all"
+            >
               Lihat Paket
             </a>
           </div>
