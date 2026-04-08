@@ -57,8 +57,8 @@ const Hero: React.FC = () => {
             />
 
             {/* Overlapping Result Card */}
-            <div className="absolute bottom-10 bg-white p-6 rounded-[2rem] shadow-[0_20px_40px_rgba(25,28,29,0.08)] max-w-[260px] border border-[#e6e8e9]">
-              <p className="text-[10px] font-black text-[#006d2f] mb-3 uppercase tracking-[0.2em]">REAL RESULTS</p>
+            <div className="absolute bottom-10 bg-white p-7 rounded-[2rem] shadow-[0_20px_40px_rgba(25,28,29,0.08)] max-w-[260px] border border-[#e6e8e9]">
+              <p className="text-[10px] font-black text-[#006d2f] mb-4 uppercase tracking-[0.2em]">REAL RESULTS</p>
               <div className="grid grid-cols-2 gap-2">
                 <div className="rounded-xl bg-[#f2f4f4] h-24 overflow-hidden grayscale-[0.2] hover:grayscale-0 transition-all">
                   <img
