@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container;
   }
@@ -26,6 +30,24 @@
 
   .asymmetric-border {
     border-radius: 1.5rem 1.5rem 1.5rem 0px;
+  }
+
+  .nav-link-animated {
+    @apply relative pb-1 transition-colors duration-300;
+  }
+
+  .nav-link-animated::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-500 transition-all duration-300 ease-out;
+  }
+
+  .nav-link-animated:hover::after,
+  .nav-link-animated.active::after {
+    @apply w-full;
+  }
+
+  .nav-link-animated.active {
+    @apply text-emerald-900 font-bold;
   }
 }
 
