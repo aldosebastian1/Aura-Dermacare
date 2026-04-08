@@ -27,9 +27,9 @@ const Gallery: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-headline font-bold tracking-tight">Hasil yang bisa kamu harapkan</h2>
             <p className="text-on-surface-variant mt-4">Bukti nyata transformasi pasien kami melalui pendekatan medis yang presisi.</p>
           </div>
-          <button className="text-primary font-bold flex items-center gap-2 group">
+          <a href="#semua-galeri" className="text-primary font-bold flex items-center gap-2 group">
             Lihat Lebih Banyak <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
+          </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {images.map((img, idx) => (
