@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Testimonials: React.FC = () => {
   const reviews = [
@@ -24,7 +25,14 @@ const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((rev, idx) => (
-            <div key={idx} className="bg-surface-container-low p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] space-y-5 sm:space-y-6 text-left">
+            <motion.div 
+              key={idx} 
+              initial={{ opacity: 0, scale: 0.95, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.15 }}
+              className="bg-surface-container-low p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] space-y-5 sm:space-y-6 text-left"
+            >
               <div className="flex gap-1 text-primary">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined fill-1">star</span>
@@ -40,7 +48,7 @@ const Testimonials: React.FC = () => {
                   <p className="text-xs text-on-surface-variant">Keluhan: {rev.complaint}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
