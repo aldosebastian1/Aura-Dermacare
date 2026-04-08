@@ -3,21 +3,21 @@ import React from 'react';
 const Pricing: React.FC = () => {
   const plans = [
     {
-      title: 'Starter Cleanse',
-      category: 'Detox & Reset',
-      features: ['Deep cleansing & blackhead', 'Hydrating face massage', 'Light chemical peel', 'Estimasi 45-60 menit'],
+      title: 'Pembersihan Dasar',
+      category: 'Detoksifikasi & Perawatan',
+      features: ['Pembersihan dalam & komedo', 'Pijat wajah menghidrasi', 'Eksfoliasi asam ringan', 'Estimasi 45-60 menit'],
       isPopular: false
     },
     {
-      title: 'Regular Glow',
-      category: 'Repair & Brighten',
-      features: ['Advanced Acne/Brightening', 'Serum Injection / Mesotherapy', 'LED Light Therapy', 'Estimasi 75-90 menit'],
+      title: 'Glow Reguler',
+      category: 'Pemulihan & Pencerahan',
+      features: ['Perawatan Jerawat / Pencerah', 'Injeksi Serum / Mesoterapi', 'Terapi Cahaya LED', 'Estimasi 75-90 menit'],
       isPopular: true
     },
     {
-      title: 'Intensif Sculpt',
-      category: 'Premium Anti-Aging',
-      features: ['Microneedling RF / HIFU', 'DNA Salmon / Skin Booster', 'Exclusive Recovery Mask', 'Estimasi 120 menit'],
+      title: 'Perawatan Intensif',
+      category: 'Anti-Penuaan Premium',
+      features: ['Microneedling RF / HIFU', 'DNA Salmon / Skin Booster', 'Masker Pemulihan Eksklusif', 'Estimasi 120 menit'],
       isPopular: false
     }
   ];
