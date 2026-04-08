@@ -20,7 +20,7 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="results" className="py-16 lg:py-24 px-6 lg:px-8 bg-surface">
+    <section id="results" className="py-16 lg:py-24 px-6 lg:px-8 bg-surface scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 lg:mb-16 gap-4 lg:gap-6">
           <div className="max-w-xl text-left">
@@ -35,8 +35,8 @@ const Gallery: React.FC = () => {
           {images.map((img, idx) => (
             <div key={idx} className="space-y-4">
               <div className="grid grid-cols-2 gap-1 rounded-2xl overflow-hidden shadow-sm h-64">
-                <img className="w-full h-full object-cover" src={img.before} alt="Before" />
-                <img className="w-full h-full object-cover" src={img.after} alt="After" />
+                <img className="w-full h-full object-cover" src={img.before} alt={`Sebelum ${img.tag} - Aura Dermacare`} />
+                <img className="w-full h-full object-cover" src={img.after} alt={`Sesudah ${img.tag} - Aura Dermacare`} />
               </div>
               <p className="text-sm font-bold text-center">{img.tag}</p>
             </div>

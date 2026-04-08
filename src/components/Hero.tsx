@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative lg:min-h-[750px] flex items-start pt-12 sm:pt-5 pb-6 px-6 lg:px-8 overflow-hidden bg-white/50">
+    <section id="home" className="relative lg:min-h-[750px] flex items-start pt-12 sm:pt-5 pb-6 px-6 lg:px-8 overflow-hidden bg-white/50 scroll-mt-24">
       <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid">
         {/* Left Content Column */}
         <div className="col-span-12 lg:col-span-7 flex flex-col space-y-8">
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         <div className="col-span-12 lg:col-span-5 relative mt-8 lg:mt-0 w-full aspect-square sm:aspect-auto">
           <div className="rounded-2xl lg:asymmetric-border overflow-hidden bg-[#f2f4f4] h-[350px] sm:h-[550px] lg:h-[650px] relative shadow-[0_32px_64px_rgba(25,28,29,0.12)]">
             <img
-              alt="Luxury clinic space"
+              alt="Klinik Kecantikan Aura Dermacare - Fasilitas Mewah dan Steril"
               className="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAItBVr5Cenf2-qh7aYUxyJMU9B0FojB6Dy__hUDJgE8yrCxH8CmAAW8xB9jdYK-Nfjz6nS-p_cCvYGxWO8c4PF_eqLZXi2ribtdzlKIXCb64EJfpMEPeYUPafqanLkHGRb6e4YkgJ2zeJ6UyGlpErGB9cRilAalFGjrfcexqrZXL1hRlKJC_z65Rf6RU8_Zik9Q-GQHDPrteukBrVTtaSFOSARiSeTl0e1LtICKwQACUNLuY43Ce_qtkM3aLnRDV3XSwJsLEEQ9gKH"
             />
