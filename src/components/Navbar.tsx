@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('');
@@ -61,7 +62,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className="flex items-center gap-4 relative z-[60]">
           <a className="hidden sm:flex bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-sm items-center gap-2" href="https://wa.me/628111111111?text=Halo%20Aura%20Dermacare!">
-            <span className="material-symbols-outlined text-[20px]">chat</span>
+            <WhatsAppIcon size={20} />
             Chat WhatsApp
           </a>
           <button 
@@ -99,7 +100,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a className="flex justify-center bg-primary-container text-on-primary-container px-6 py-3.5 mt-2 rounded-full font-bold active:scale-95 transition-all duration-200 shadow-sm items-center gap-2" href="https://wa.me/628111111111?text=Halo%20Aura%20Dermacare!">
-            <span className="material-symbols-outlined text-[20px]">chat</span>
+            <WhatsAppIcon size={20} />
             Chat WhatsApp
           </a>
         </div>
