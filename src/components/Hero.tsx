@@ -20,13 +20,13 @@ const Hero: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button className="bg-[#25D366] w-full sm:w-auto justify-center text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-lg active:scale-95 transition-all flex items-center gap-3">
+            <a href="https://wa.me/628111111111?text=Halo%20Aura%20Dermacare,%20saya%20ingin%20berkonsultasi!" className="bg-[#25D366] w-full sm:w-auto justify-center text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-lg active:scale-95 transition-all flex items-center gap-3">
               <span className="material-symbols-outlined text-xl sm:text-2xl">forum</span>
               Chat WhatsApp
-            </button>
-            <button className="bg-[#f8fafa] w-full sm:w-auto justify-center border-2 border-[#e1e3e3] text-[#191c1d] px-6 sm:px-8 py-4 rounded-full font-bold text-base hover:bg-[#f2f4f4] transition-all">
+            </a>
+            <a href="#pricing" className="bg-[#f8fafa] w-full sm:w-auto justify-center border-2 border-[#e1e3e3] flex items-center text-[#191c1d] px-6 sm:px-8 py-4 rounded-full font-bold text-base hover:bg-[#f2f4f4] transition-all">
               Lihat Paket
-            </button>
+            </a>
           </div>
 
           {/* Trust Indicators */}
