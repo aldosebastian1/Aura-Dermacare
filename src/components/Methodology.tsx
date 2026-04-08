@@ -9,7 +9,7 @@ const Methodology: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-16 lg:py-24 bg-surface-container-low px-6 lg:px-8 overflow-hidden scroll-mt-24">
+    <section id="proses-perawatan" className="py-16 lg:py-24 bg-surface-container-low px-6 lg:px-8 overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto editorial-grid flex flex-col lg:grid items-center gap-12 lg:gap-0">
         <div className="col-span-12 lg:col-span-5 order-2 lg:order-1 w-full">
           <div className="relative">
