@@ -34,6 +34,20 @@ const Navbar: React.FC = () => {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
+    if (window.location.hash === '#semua-galeri') {
+      window.location.hash = '#' + targetId;
+      setIsMobileMenuOpen(false);
+      
+      // Delay scrolling until App re-renders the home component
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
+    
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
