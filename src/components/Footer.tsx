@@ -33,16 +33,16 @@ const Footer: React.FC = () => {
             Tenaga Medis Terakreditasi IDI & KKI<br />
             Payments: BCA, Mandiri, CC, QRIS
           </p>
-          <div className="flex gap-4 opacity-50">
-            <span className="material-symbols-outlined text-[20px]">payments</span>
-            <span className="material-symbols-outlined text-[20px]">credit_card</span>
-            <span className="material-symbols-outlined text-[20px]">qr_code</span>
+          <div className="flex gap-4 opacity-50 ">
+            <span className="material-symbols-outlined text-[20px] text-emerald-600">payments</span>
+            <span className="material-symbols-outlined text-[20px] text-emerald-600">credit_card</span>
+            <span className="material-symbols-outlined text-[20px] text-emerald-600">qr_code</span>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-7xl mx-auto px-8 mt-10 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-slate-400 text-xs">© 2024 Aura Dermacare. All rights reserved.</p>
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-5  items-center">
           <a className="text-slate-400 hover:text-emerald-600 transition-colors" href="#" aria-label="Instagram">
             <Instagram size={18} />
           </a>
